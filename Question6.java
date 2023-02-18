@@ -198,7 +198,6 @@ public class Question6 extends JFrame{
 				checkID(id);
 			}
 			catch (IDException i ) {
-				System.out.println(i.getMessage());
 				correct1 = false;
 				str1 = i.getMessage();
 			}
@@ -207,7 +206,6 @@ public class Question6 extends JFrame{
 				checkNum(bnum);
 			}
 			catch (NumException n) {
-				System.out.println(n.getMessage());
 				correct2 = false;
 				str2 = n.getMessage();
 			}
@@ -216,11 +214,9 @@ public class Question6 extends JFrame{
 				checkBalance(bal);
 			}
 			catch (BalanceException b) {
-				System.out.println(b.getMessage());
 				correct3 = false;
 				str3 = b.getMessage();
 			}
-			// In a multiple catch block, when the java program catch the first exception it would stop and execute the catch block code , even though there might be some other exceptions as well
 			
 			dispose();
 			new newFrame(correct1, correct2, correct3, str1 , str2 , str3);
@@ -348,7 +344,6 @@ public class Question6 extends JFrame{
 				re.setVisible(false);
 				next.setVisible(false);
 				
-				//removeAll();
 			
 				panel1.setLayout(new FlowLayout());
 				panel2.setLayout(new FlowLayout());
@@ -392,13 +387,11 @@ public class Question6 extends JFrame{
 				result.setVisible(false);
 				checkWord(status);
 				try {
-					//System.out.println(amount);
 					checkNewBalance(status, amounts );
 					 result.setText("Total balance: $" + balan );
 					add(result);
 					result.setVisible(true);
 				} catch (BalanceException e1) {
-					//e1.printStackTrace();
 					JLabel warn = new JLabel(e1.getMessage());
 					add(warn);
 					setVisible(true);
@@ -421,22 +414,15 @@ public class Question6 extends JFrame{
 		}
 		
 	}
-	
-	// First do exception class, Next create methods that use this exception. Then use the methods
-	
+
 	public void checkNewBalance(boolean choice, String input) throws BalanceException {
 		
 		boolean status = true;
 		double amount = 0;
 		balan = Double.parseDouble(bal);
-		System.out.println("hello asd");
-		System.out.println(choice);
-		
-		
-		
+	
 		try {
 			amount = Double.parseDouble(input);
-			System.out.println("hello");
 		}
 		catch(NumberFormatException n) {
 			status = false;
