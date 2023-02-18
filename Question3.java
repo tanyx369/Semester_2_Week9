@@ -20,8 +20,6 @@ public class Question3 extends JFrame
 	
 	Question3(){
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//this.setSize(500 ,300);
-		//this.setLayout(null);
 		
 		JLabel label = new JLabel("Enter your text");
 		label.setBounds(0, 0, 200, 10);
@@ -38,8 +36,6 @@ public class Question3 extends JFrame
 		
 		JPanel buttongrp = new JPanel();
 		buttongrp.setLayout(new FlowLayout(FlowLayout.LEADING));
-		//buttongrp.setPreferredSize(new Dimension(500, 60));
-		//buttongrp.setBounds(0, 200, 500, 60);
 		JLabel label2 = new JLabel("Font: ");
 		JLabel label3 = new JLabel("Size: ");
 		JLabel label4 = new JLabel("Style: ");
@@ -76,7 +72,6 @@ public class Question3 extends JFrame
 			
 			if(e.getSource() == fonts) {
 				if(fonts.getSelectedItem().equals("SansSerif")) {
-					System.out.println("hello");
 					font_ch = "SansSerif";
 				}
 				else if(fonts.getSelectedItem().equals("Arial")) {
@@ -98,7 +93,6 @@ public class Question3 extends JFrame
 		
 		
 				if(style.getSelectedItem().equals("Bold")) {
-					System.out.println("asd");
 					style_ch = "Bold";
 				}
 				else if(style.getSelectedItem().equals("Italic")) {
@@ -116,12 +110,10 @@ public class Question3 extends JFrame
 		if(font_ch.equals("SansSerif")) {
 			field.setFont(new Font("SansSerif", style , wsize ));
 			field.setText(input);
-			System.out.print("ahsd");
 		}
 		else if (font_ch.equals("Arial")) {
 			field.setFont(new Font("Arial" , style, wsize));
 			field.setText(input);
-			System.out.println("qweq");
 		}
 		else if (font_ch.equals("Serif")) {
 			field.setFont(new Font("Serif" , style, wsize));
@@ -146,11 +138,9 @@ public class Question3 extends JFrame
 			
 			if(style_ch.equals("Bold")) {
 				renew(Font.BOLD);
-				System.out.println("2dd");
 			}
 			else if (style_ch.equals("Italic")) {
 				renew(Font.ITALIC);
-				System.out.println("2de");
 			}
 
 
