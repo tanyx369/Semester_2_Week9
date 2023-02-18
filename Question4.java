@@ -14,7 +14,6 @@ public class Question4 extends JFrame
 	JButton next;
 	JLabel warn;
 	float input;
-	//int output = 0;
 	ArrayList<Float> list = new ArrayList<Float>();	
 	
 	int chance = 0;
@@ -24,7 +23,6 @@ public class Question4 extends JFrame
 		this.setSize(500 ,100);
 		this.setResizable(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//this.setLayout(new FlowLayout());
 		
 		panel = new JPanel();
 		panel.setLayout(new FlowLayout(FlowLayout.LEADING));
@@ -52,29 +50,14 @@ public class Question4 extends JFrame
 		this.setVisible(true);
 	}
 	
-	/*
-	class FalseException extends NumberFormatException{
-		
-		FalseException(){
-			super("Not a floating number");
-		}
-		
-		FalseException(String str){
-			super(str);
-		}
-		
-	}
-	*/
 	public boolean check() {
 		
 		boolean status;
 		try {
 			input = Float.parseFloat(field.getText());
-			System.out.println(input);
 			status = true;
 		}
 		catch(NumberFormatException f) {
-			System.out.println("got");
 			status = false;
 		}
 		
@@ -92,8 +75,7 @@ public class Question4 extends JFrame
 				warn.setText("");
 			}
 			else {
-				chance ++; // use other method or put in the constructor
-				System.out.println("haha");
+				chance ++;
 				warn.setText("Invalid input. Please try again.");
 				warn.setForeground(Color.red);
 			}
