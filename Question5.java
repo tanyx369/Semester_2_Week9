@@ -182,7 +182,6 @@ public class Question5 extends JFrame
 				checkID(id);
 			}
 			catch (IDException i ) {
-				System.out.println(i.getMessage());
 				correct1 = false;
 			}
 			
@@ -190,7 +189,6 @@ public class Question5 extends JFrame
 				checkNum(bnum);
 			}
 			catch (NumException n) {
-				System.out.println(n.getMessage());
 				correct2 = false;
 			}
 			
@@ -198,7 +196,6 @@ public class Question5 extends JFrame
 				checkBalance(bal);
 			}
 			catch (BalanceException b) {
-				System.out.println(b.getMessage());
 				correct3 = false;
 			}
 			
