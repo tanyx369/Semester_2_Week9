@@ -201,7 +201,6 @@ public class Question5 extends JFrame
 				System.out.println(b.getMessage());
 				correct3 = false;
 			}
-			// In a multiple catch block, when the java program catch the first exception it would stop and execute the catch block code , even though there might be some other exceptions as well
 			
 			dispose();
 			new newFrame(correct1, correct2, correct3);
