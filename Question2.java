@@ -41,35 +41,21 @@ public class Question2 extends JComponent
     	
     	g2.drawString("Month", 505, 450);
     	
-    	//System.out.println(g2.getFont());
+    
     }
     
     public static void main(String[] args) {
+    
     	JFrame frame = new JFrame();
     	frame.setSize(600, 600);
     	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
     	JLabel label = new JLabel("Billing Amount");
     	Question2 line = new Question2();
-    	
-    	/*
-    	 JPanel panel = new JPanel();
-    	panel.setLayout(new FlowLayout());
-    	JLabel label1 = new JLabel("January");
-    	JLabel label2 = new JLabel("February");
-    	JLabel label3 = new JLabel("March");
-    	JLabel label4 = new JLabel("April");
-    	JLabel label5 = new JLabel("May");
-    	panel.add(label1);
-    	panel.add(label2);
-    	panel.add(label3);
-    	panel.add(label4);
-    	panel.add(label5);
-    	 */
+
     	
     	frame.add(label, BorderLayout.NORTH);
     	frame.add(line);
-    	//frame.add(panel, BorderLayout.SOUTH);
     	frame.setVisible(true);
     	
     	
