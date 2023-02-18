@@ -405,8 +405,6 @@ public class Question6 extends JFrame{
 			
 			if(b == true) {
 				amounts = field.getText();
-				System.out.println("true");
-				System.out.println(amount);
 			}
 			else {
 				amounts = field2.getText();
